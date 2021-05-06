@@ -2,9 +2,21 @@
   "name": "@shenhao/ui",
   "private": false,
   "version": "0.0.1",
-  "scripts":{
-    
+  "scripts": {
+    "init":"npx husky install && npx husky add .husky/commit-msg 'npx commitlint -e'",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "add": "^2.0.6",
+    "commitizen": "^4.2.3",
+    "cz-lerna-changelog": "^2.0.3",
+    "husky": "^6.0.0"
   }
 }
