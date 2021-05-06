@@ -1,7 +1,10 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "@shenhao/ui",
+  "private": false,
+  "version": "0.0.1",
+  "scripts":{
+    
+  },
   "devDependencies": {
-    "lerna": "^4.0.0"
   }
 }
