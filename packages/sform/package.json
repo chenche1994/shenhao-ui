@@ -1,6 +1,6 @@
 {
   "name": "@shenhao-ui/sform",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "基于element-ui 二次封装的table和form组件",
   "author": "chencheng <chenchenxp@126.com>",
   "homepage": "",
