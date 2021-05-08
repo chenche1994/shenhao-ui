@@ -1,11 +1,11 @@
-# `@shenhao-ui/sform`
+# @shenhao-ui/w-form
 
 > TODO: description
 
 ## Usage
 
 ```
-const sform = require('@shenhao-ui/sform');
+const wForm = require('w-form');
 
 // TODO: DEMONSTRATE API
 ```

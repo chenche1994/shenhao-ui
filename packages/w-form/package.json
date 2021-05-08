@@ -1,0 +1,28 @@
+{
+  "name": "@shenhao-ui/w-form",
+  "version": "0.0.0",
+  "description": "基于element-ui二次封装的table，form组件",
+  "keywords": [
+    "table，form"
+  ],
+  "author": "chencheng <chenchenxp@126.com>",
+  "homepage": "https://github.com/chenche1994/shenhao-ui#readme",
+  "license": "ISC",
+  "main": "lib/w-form.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/chenche1994/shenhao-ui/issues"
+  },
+  "dependencies": {
+    "element-ui": "^2.15.1"
+  }
+}
