@@ -1,0 +1,36 @@
+
+$sideBarWidth: 210px;
+$sideBarWidthHide: 54px;
+
+$navBg: #37383a;
+
+$menuBg: #fff;
+$menuBgHover:#e89a12;
+$menuText: #333;
+$menuHover:#fff;
+$menuActiveText:#fff;
+
+$subMenuBg: #fff;
+$subMenuActiveText:#e89a12;
+$subMenuHover:#e89a12;
+
+$activeColor:#e89a12;
+$text-grey: #999;
+$text-primary: #333;
+
+$border: 1px solid #e8e8e9;
+
+$paddingPrimary: 20px;
+
+.el-scrollbar__view {
+    height: 100%;
+  }
+:export{
+    navBg: $navBg;
+    menuText: $menuText;
+    menuBg: $menuBg;
+    menuBgHover: $menuBgHover;
+    menuActiveText: $menuActiveText;
+    activeColor: $activeColor;
+    // sideBarWidth: $sideBarWidth;
+}

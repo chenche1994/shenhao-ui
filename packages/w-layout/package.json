@@ -1,9 +1,10 @@
 {
-  "name": "@shenhao-ui/w-form",
-  "version": "0.0.0",
-  "description": "基于element-ui二次封装的table，form组件",
+  "name": "w-layout",
+  "version": "0.0.1",
+  "description": "基于element-ui改造的管理后台通用布局",
   "keywords": [
-    "table，form"
+    "layout，element-ui",
+    "vue"
   ],
   "author": "chencheng <chenchenxp@126.com>",
   "homepage": "https://github.com/chenche1994/shenhao-ui#readme",
@@ -16,6 +17,10 @@
   "files": [
     "lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenche1994/shenhao-ui.git"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },

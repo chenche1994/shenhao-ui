@@ -6,7 +6,7 @@
 
 </template>
 <script>
-import STable from 'packages/sform'
+import STable from 'packages/w-form'
 export default {
   components: {
     STable
