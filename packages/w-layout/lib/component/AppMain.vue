@@ -1,10 +1,8 @@
 <template>
   <el-scrollbar wrap-class="scrollbar-wrapper" class="app-main">
-    <!-- <transition name="fade-transform" mode="out-in"> -->
-    <router-view :key="key" />
-    <!-- 存放子应用容器 -->
-    <div id="subapp" />
-    <!-- </transition> -->
+    <transition name="fade-transform" mode="out-in">
+      <router-view :key="key" />
+    </transition>
   </el-scrollbar>
 </template>
 

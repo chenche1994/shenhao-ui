@@ -1,8 +1,10 @@
 <template>
-  <div class="app-wrapper" :class="{'hideSidebar': !opened, 'openSidebar': opened}">
-    <navbar :opened="opened" :user="user" @toggleSideBar="toggleSideBar" @logout="logout" />
+  <div class="app-wrapper" :class="[{'hideSidebar': !opened, 'openSidebar': opened}, `app-menu-${mode}`]">
+    <sidebar class="sidebar-container" :opened="opened" :menu="menu" :logo-large="logoLarge" :logo-small="logoSmall" />
+    <div class="nav-container">
+      <navbar :opened="opened" :user="user" :avatar="avatar" @toggleSideBar="toggleSideBar" @logout="logout" />
+    </div>
     <div class="main-container">
-      <sidebar class="sidebar-container" :opened="opened" :menu="menu" :logo-large="logoLarge" :logo-small="logoSmall" />
       <app-main />
     </div>
   </div>
@@ -12,8 +14,6 @@
 import Sidebar from "./component/Sidebar/Index.vue";
 import Navbar from "./component/Navbar";
 import AppMain from "./component/AppMain.vue";
-
-import './styles/index.scss';
 export default {
   name: "IndexVue",
   components: {
@@ -22,6 +22,10 @@ export default {
     AppMain
   },
   props: {
+    mode: {
+      type: String,
+      default: 'vertical' // 垂直模式：vertical，水平模式：horizontal
+    },
     user: {
       type: [Object, String],
       default: () => ({})
@@ -37,6 +41,10 @@ export default {
     logoSmall: {
       type: String,
       default: ''
+    },
+    avatar: {
+      type: String,
+      default: require('./assets/images/user.png')
     }
   },
   data() {
@@ -57,10 +65,7 @@ export default {
 <style>
 </style>
 <style scoped lang="scss">
-@import './styles/common.scss';
-@import './styles/mixin.scss';
 .app-wrapper{
-  @include clearfix;
   position: relative;
   height: 100%;
   width: 100%;

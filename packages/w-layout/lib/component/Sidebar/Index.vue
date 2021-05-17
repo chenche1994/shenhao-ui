@@ -67,17 +67,10 @@ export default {
 </script>
 
 <style scoped  lang="scss">
-@import '../../styles/common.scss';
 .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
     min-height: 400px;
   }
-h2{
-  color: $menuText;
-  margin: 0;
-  padding: 10px;
-  font-size: 18px;
-}
 .sidebar-logo{
   margin: 15px 18px;
 }

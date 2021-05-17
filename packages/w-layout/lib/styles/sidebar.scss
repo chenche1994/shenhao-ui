@@ -11,14 +11,12 @@
       transition: width 0.28s;
       width: $sideBarWidth !important;
       background-color: $menuBg;
-      height: calc(100% - 52px);
       position: fixed;
-      font-size: 0px;
-      top: 52px;
+      // font-size: 0px;
       left: 0;
       z-index: 1001;
       overflow: hidden;
-  
+
       // reset element-ui css
       .horizontal-collapse-transition {
         transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
@@ -198,6 +196,23 @@
         transition: none;
       }
     }
+    .app-menu-horizontal {
+      .sidebar-container{
+        top: 0;
+        height: 100%;
+      }
+      .nav-container{
+        transition: margin-left .28s;
+        margin-left: $sideBarWidth;
+        position: relative;
+      }
+    }
+    .app-menu-vertical{
+      .sidebar-container{
+        top: 52px;
+        height: calc(100% - 52px);
+      }
+    } 
   }
   
   // when menu collapsed
@@ -239,4 +254,6 @@
     }
   }
 }
-  
+.el-breadcrumb__inner a{
+  color: #fff;
+}

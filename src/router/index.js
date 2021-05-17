@@ -3,9 +3,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 export const routes = [{
-  path: '/w-layout',
+  path: '/',
   name: 'wlayout',
   component: () => import('@/views/layout/index.vue'),
+  meta: { title: 'SForm', icon: '' },
   redirect: '/s-form',
   children: [{
     path: '/s-form',

@@ -1,30 +1,31 @@
 <template>
   <div class="navbar">
-    <div style="display:flex; align-items:center">
-      <hamburger :is-active="opened" class="hamburger-container" @toggleClick="toggleSideBar" />
-      <breadcrumb class="breadcrumb-container" />
-    </div>
-    <div class="right-menu">
-      <!-- 自定义内容 -->
-      <slot />
-      <el-dropdown class="avatar-container" trigger="click">
-        <div class="avatar-wrapper">
-          <el-avatar :src="avatar" size="small" style="margin-right:10px" />
-          <span>{{ user.userName }}</span>
-          <i class="el-icon-caret-bottom" />
-        </div>
-        <el-dropdown-menu slot="dropdown" class="user-dropdown">
-          <router-link to="/">
-            <el-dropdown-item>
-              首页
+    <slot>
+      <div style="display:flex; align-items:center">
+        <hamburger :is-active="opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+        <breadcrumb class="breadcrumb-container" />
+      </div>
+      <div class="right-menu">
+        <!-- 自定义内容 -->
+        <el-dropdown class="avatar-container" trigger="click">
+          <div class="avatar-wrapper">
+            <el-avatar :src="avatar" size="small" style="margin-right:10px" />
+            <span>{{ user.userName }}</span>
+            <i class="el-icon-caret-bottom" />
+          </div>
+          <el-dropdown-menu slot="dropdown" class="user-dropdown">
+            <router-link to="/">
+              <el-dropdown-item>
+                首页
+              </el-dropdown-item>
+            </router-link>
+            <el-dropdown-item divided @click.native="logout">
+              <span style="display:block;">注销登录</span>
             </el-dropdown-item>
-          </router-link>
-          <el-dropdown-item divided @click.native="logout">
-            <span style="display:block;">注销登录</span>
-          </el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
-    </div>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </div>
+    </slot>
   </div>
 </template>
 
@@ -51,11 +52,10 @@ export default {
     user: {
       type: [Object, String],
       default: () => ({})
-    }
-  },
-  data() {
-    return {
-      avatar: ''// require('@/assets/images/user.png')
+    },
+    avatar: {
+      type: String,
+      default: require('../../assets/images/user.png')
     }
   },
   methods: {
