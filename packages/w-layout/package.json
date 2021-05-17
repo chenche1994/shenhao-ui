@@ -1,6 +1,6 @@
 {
   "name": "w-layout",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "基于element-ui改造的管理后台通用布局",
   "keywords": [
     "layout，element-ui",
